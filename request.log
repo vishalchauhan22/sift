@@ -1,0 +1,10 @@
+POST /api/v2/search?category=books&id=1042&redirect_to=/dashboard&debug=false HTTP/1.1
+Host: shop.example.com
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36
+Accept: application/json
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+Cookie: session=ab12cd34ef; csrftoken=zzz999
+Content-Length: 68
+
+query=laptop&sort=price&file=report.pdf&return_url=https://shop.example.com/home

@@ -1,0 +1,16 @@
+{
+  "name": "command-composer",
+  "version": "0.1.0",
+  "description": "Generator-only CLI that turns a saved HTTP request into copy-pasteable pentest tool commands. Never executes anything.",
+  "bin": {
+    "command-composer": "cli.js"
+  },
+  "scripts": {
+    "start": "node cli.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.0.0"
+  },
+  "license": "MIT"
+}

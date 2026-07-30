@@ -1,0 +1,18 @@
+{
+  "_comment": "Default SecLists wordlist paths per assessment type. Override these to match your install. Paths are NOT validated to exist — this tool only prints strings.",
+  "wordlists": {
+    "param-discovery": "/usr/share/seclists/Discovery/Web-Content/burp-parameter-names.txt",
+    "sqli": "/usr/share/seclists/Fuzzing/SQLi/Generic-SQLi.txt",
+    "xss": "/usr/share/seclists/Fuzzing/XSS/XSS-Jhaddix.txt",
+    "command-injection": "/usr/share/seclists/Fuzzing/command-injection-commix.txt",
+    "ssti": "/usr/share/seclists/Fuzzing/template-engines-special-vars.txt",
+    "path-traversal": "/usr/share/seclists/Fuzzing/LFI/LFI-Jhaddix.txt",
+    "redirect-ssrf": "/usr/share/seclists/Fuzzing/URL-based-SSRF-Payloads.txt",
+    "crlf": "/usr/share/seclists/Fuzzing/CRLF-injection.txt",
+    "broad": "/usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt"
+  },
+  "defaultThrottle": {
+    "mode": "rps",
+    "value": 5
+  }
+}

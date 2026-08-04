@@ -1,0 +1,2 @@
+// extracted by mini-css-extract-plugin
+export default {"visible":"fade-callout_visible_def","fadeIn":"fade-callout_fadeIn_wPN","initial":"fade-callout_initial_rbJ","hidden":"fade-callout_hidden_JPc","widthExpanded":"fade-callout_widthExpanded_QE6","widthCollapsed":"fade-callout_widthCollapsed_gbh"};

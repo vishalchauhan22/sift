@@ -11,6 +11,7 @@
  *   -H <header>       extra header (cookie/auth)
  *   --delay <ms>      milliseconds between requests (throttle)
  *   -b <oob>          blind XSS callback URL (when OOB provided)
+ *   -o <file>         write results into the project folder
  *
  * TODO: verify against installed `dalfox --help` (subcommand is `url`; body
  *       flag may be `--data` in some builds).
@@ -34,7 +35,7 @@ function generate(ctx) {
   } else {
     target = `url ${u.q(u.plainUrl(ctx))}`;
   }
-  const cmd = `dalfox ${target} --param ${u.q(p)} ${cookieFlag} ${blind} ${delayFlag(ctx)}`;
+  const cmd = `dalfox ${target} --param ${u.q(p)} ${cookieFlag} ${blind} ${delayFlag(ctx)} -o ${u.outFile(ctx, 'dalfox_' + u.sanitize(p))}`;
   return {
     tool: 'dalfox',
     commands: [

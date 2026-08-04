@@ -1,0 +1,2 @@
+// extracted by css-extract-rspack-plugin
+export default {"panel":"panel_panel_VGJ","expanded":"panel_expanded_qTk","formContainer":"panel_formContainer_Ar4","header":"panel_header_BV4","withBorder":"panel_withBorder_ZCF","headerButtonSlot":"panel_headerButtonSlot_Ip0","content":"panel_content_Fsj","hidden":"panel_hidden_dpF","nav":"panel_nav_rSI"};

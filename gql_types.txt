@@ -1,0 +1,90 @@
+fragment Asset on Asset
+fragment AudioVariableFromTask on AudioVariable
+fragment AutoFeatureStatuses on AutoFeatureStatuses
+fragment CommentPostFragment on PublicVideoComment
+fragment CommentReactionFragment on CommentReactionMetadata
+fragment CommentReplyFragment on PublicVideoComment
+fragment ConsolidatedEditCameraBubbleRegion on RegularUserVideo
+fragment ConsolidatedEditCanvasArrowOverlay on VideoCanvasArrowOverlay
+fragment ConsolidatedEditCanvasBoxOverlay on VideoCanvasBoxOverlay
+fragment ConsolidatedEditCanvasTextOverlay on VideoCanvasTextOverlay
+fragment ConsolidatedEditClipDimensions on VideoClipDetails
+fragment ConsolidatedEditClip on VideoClipDetails
+fragment ConsolidatedEditPhraseFragment on TimestampedPhrase
+fragment ConsolidatedEditTextReplacement on VideoTextReplacement
+fragment ConsolidatedEditVideoBackground on RegularUserVideo
+fragment ConsolidatedEditVideoClipDimensions on RegularUserVideo
+fragment ConsolidatedEditVideoClips on RegularUserVideo
+fragment ConsolidatedEditVideoHasVariables on RegularUserVideo
+fragment ConsolidatedEditVideoName on RegularUserVideo
+fragment ConsolidatedEditVideo on RegularUserVideo
+fragment ConsolidatedEditVideoOverlays on RegularUserVideo
+fragment ConsolidatedEditVideoPreview on RegularUserVideo
+fragment ConsolidatedEditVideoTextReplacements on RegularUserVideo
+fragment ConsolidatedEditVideoTrims on RegularUserVideo
+fragment ConsolidatedEditVideoWaveform on RegularUserVideo
+fragment ConsolidatedEditZoomInstruction on EditZoomInstructionsMetadata
+fragment ConsolidatedEditZoomInstructions on RegularUserVideo
+fragment DeleteCommentUpdateFragment on PublicVideoComment
+fragment EditTabVideoTrims on RegularUserVideo
+fragment FollowsProfileUserFragment on RegularUser
+fragment FullType on __Type
+fragment InputValue on __InputValue
+fragment ReactionFragment on PublicVideoReaction
+fragment SharePageVideoBackground on RegularUserVideo
+fragment SharePageVideoProcessingInformation on RegularUserVideo
+fragment SuggestedSpace on Space
+fragment SuggestedWorkspaceFragment on JoinableWorkspace
+fragment TaskStatus on TaskStatusPayload
+fragment TypeRef on __Type
+fragment VideoCardVisibilityFragment on RegularUserVideo
+fragment VideoFields on RegularUserVideo
+fragment VideoPlayerReactionFragment on PublicVideoReaction
+fragment VideoPlayerV2Fragment on RegularUserVideo
+fragment VideoSource on CloudfrontSignedUrlPayload
+fragment VideoTaskFragment on VideoTask
+fragment VideoTaskResponseFragment on ActivityResponse
+typename: AddCommentReactionPayload
+typename: AudioVariable
+typename: AvailableFtux
+typename: Backlink
+typename: CalendarMeeting
+typename: CommentReactionMetadata
+typename: CompletableTrigger
+typename: CurrentUser
+typename: CustomVideoBackground
+typename: DeclineInvitationResult
+typename: DismissWorkflowSneakpeekProperty
+typename: editCommentPayload
+typename: GetCommentReactionsPayload
+typename: GetVideoCanBeEditedWithoutRetranscriptionPayload
+typename: HexVideoBackground
+typename: Mutation
+typename: NotificationTrayItem
+typename: NotificationTrayItemEdge
+typename: OrganizationInvitation
+typename: PageInfo
+typename: PresetVideoBackground
+typename: PublicVideoComment
+typename: PublicVideoReaction
+typename: Query
+typename: RegularUser
+typename: RegularUserVideo
+typename: RemoveAllEditZoomInstructionsPayload
+typename: RemoveCommentReactionPayload
+typename: RemoveEditZoomInstructionPayload
+typename: RemoveVideoBackgroundPayload
+typename: TaskStatusPayload
+typename: ToggleCalendarMeetingPayload
+typename: UpdateCalendarMeetingRecordPayload
+typename: UpdateCustomVideoBackgroundPayload
+typename: UpdateDismissWorkflowSneakpeekPayload
+typename: UpdateHexVideoBackgroundPayload
+typename: UpdatePresetVideoBackgroundPayload
+typename: UpdateUserTriggerV2Payload
+typename: UpdateVideoNamePayload
+typename: VideoCanvasArrowOverlay
+typename: VideoCanvasBoxOverlay
+typename: VideoCanvasTextOverlay
+typename: VideoReactionsSuccessPayload
+typename: VideoTask

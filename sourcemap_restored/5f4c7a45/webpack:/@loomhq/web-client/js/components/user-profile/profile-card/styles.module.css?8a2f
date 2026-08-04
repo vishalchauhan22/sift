@@ -1,0 +1,2 @@
+// extracted by mini-css-extract-plugin
+export default {"profileCard":"profile-card_profileCard_f6i","profileCardHoverNewNav":"profile-card_profileCardHoverNewNav_sNy","avatarLink":"profile-card_avatarLink_DDj","textLink":"profile-card_textLink_XMR","breakWords":"profile-card_breakWords_fF1"};

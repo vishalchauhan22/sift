@@ -11,6 +11,7 @@
  *   --cookie <c>      session cookie
  *   --batch           non-interactive
  *   --delay <sec>     seconds between requests (throttle)
+ *   (no native -o flag) output captured via `| tee` into the project folder
  *
  * ghauri is an alternative SQLi engine — handy as a second opinion to sqlmap.
  *
@@ -36,7 +37,7 @@ function generate(ctx) {
     ? `-u ${u.q(u.plainUrl(ctx))} --data ${u.q(u.plainBody(ctx))}`
     : `-u ${u.q(u.plainUrl(ctx))}`;
   const method = ctx.method !== 'GET' ? `--method ${ctx.method}` : '';
-  const cmd = `ghauri ${target} -p ${u.q(p)} ${method} ${cookieFlag(ctx)} --batch ${delayFlag(ctx)}`;
+  const cmd = `ghauri ${target} -p ${u.q(p)} ${method} ${cookieFlag(ctx)} --batch ${delayFlag(ctx)} ${u.teeTo(ctx, 'ghauri_' + u.sanitize(p))}`;
   return {
     tool: 'ghauri',
     commands: [

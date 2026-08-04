@@ -9,6 +9,7 @@
  *   -w <wordlist>     parameter-name wordlist
  *   -b <body>         body template (for POST)
  *   --delay <ms>      milliseconds between requests (throttle)
+ *   -o <file>         write results into the project folder
  *
  * Endpoint-level hidden-parameter discovery (fast, Rust). Complements arjun.
  *
@@ -29,7 +30,7 @@ function generate(ctx) {
     method !== 'GET' && ctx.bodyType === 'form' ? `-b ${u.q(u.plainBody(ctx))}` : '';
   const cmd =
     `x8 -u ${u.q(u.plainUrl(ctx))} -X ${method} -w ${u.q(ctx.wordlist)} ` +
-    `${bodyFlag} ${delayFlag(ctx)}`;
+    `${bodyFlag} ${delayFlag(ctx)} -o ${u.outFile(ctx, 'x8')}`;
   return {
     tool: 'x8',
     commands: [

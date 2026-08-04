@@ -12,6 +12,7 @@
  *   --batch           never prompt (non-interactive)
  *   --level / --risk  test depth (kept modest: 2 / 1)
  *   --delay <sec>     seconds between requests (throttle)
+ *   --output-dir <d>  write session/output into the project folder
  *
  * TODO: verify against installed `sqlmap --help` (cookie is often better via
  *       --cookie; adjust --level/--risk to engagement rules).
@@ -46,7 +47,7 @@ function generate(ctx) {
   const method = ctx.method !== 'GET' ? `--method ${ctx.method}` : '';
   const cmd =
     `sqlmap ${target} -p ${u.q(p)} ${method} ${authHeaders(ctx)} ` +
-    `--batch --level 2 --risk 1 ${delayFlag(ctx)}`;
+    `--batch --level 2 --risk 1 ${delayFlag(ctx)} --output-dir ${u.outDirQ(ctx)}`;
   return {
     tool: 'sqlmap',
     commands: [

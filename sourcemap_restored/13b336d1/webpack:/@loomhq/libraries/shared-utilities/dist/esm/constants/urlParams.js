@@ -1,0 +1,54 @@
+import "../chunk-BYZ2GIR3.js";
+const REPLY_TO_COMMENT_PARAM = "replyToComment";
+const FOCUS_TITLE_PARAM = "focus_title";
+const MUTED_PARAM = "muted";
+const SOURCE_EMAIL_PARAM = "source_email";
+const FROM_RECORDER_PARAM = "from_recorder";
+const CASCADING_RECORDERS_TAB_UUID_PARAM = "cascading_recorders_tab_uuid";
+const ACTIVE_TAB_PARAM = "active_tab";
+const SCREENSHOT_EDIT_MODE_PARAM = "edit_mode";
+const SCREENSHOT_OPEN_SETTINGS_PARAM = "open_screenshot_settings";
+const RECORDING_LIMIT_PARAM = "recording_limit";
+const TIME_PARAM = "t";
+const SOURCE_PARAM = "source";
+const OAUTH_ERROR_PARAM = "oauth_error";
+const PROVIDER_PARAM = "provider";
+const DATA_PARAM = "data";
+const SIMPLIFY_PLAYER_PARAM = "simplify_player";
+const FROM_EXTENSION_TUTORIAL = "from_tutorial";
+const ANON_EMAIL_PARAM = "anon_email";
+const NEW_VIDEOS_FROM_VARIABLE = "addToVariable";
+const EDIT_PAGE_VARIABLES_MODE = "variables";
+const VARIABLES_VIDEOS_CREATED_SOURCE_PARAM = "variables_source";
+const OPEN_SHARE_PERMISSIONS_PARAM = "open_share_permissions";
+const WORKFLOWS_SCREENSHOT_PARAM = "workflows_screenshot";
+const RECORDING_DOCUMENTATION_TYPE_PARAM = "recording_documentation_type";
+const OPEN_BACKGROUND_PICKER_PARAM = "open_background_picker";
+export {
+  ACTIVE_TAB_PARAM,
+  ANON_EMAIL_PARAM,
+  CASCADING_RECORDERS_TAB_UUID_PARAM,
+  DATA_PARAM,
+  EDIT_PAGE_VARIABLES_MODE,
+  FOCUS_TITLE_PARAM,
+  FROM_EXTENSION_TUTORIAL,
+  FROM_RECORDER_PARAM,
+  MUTED_PARAM,
+  NEW_VIDEOS_FROM_VARIABLE,
+  OAUTH_ERROR_PARAM,
+  OPEN_BACKGROUND_PICKER_PARAM,
+  OPEN_SHARE_PERMISSIONS_PARAM,
+  PROVIDER_PARAM,
+  RECORDING_DOCUMENTATION_TYPE_PARAM,
+  RECORDING_LIMIT_PARAM,
+  REPLY_TO_COMMENT_PARAM,
+  SCREENSHOT_EDIT_MODE_PARAM,
+  SCREENSHOT_OPEN_SETTINGS_PARAM,
+  SIMPLIFY_PLAYER_PARAM,
+  SOURCE_EMAIL_PARAM,
+  SOURCE_PARAM,
+  TIME_PARAM,
+  VARIABLES_VIDEOS_CREATED_SOURCE_PARAM,
+  WORKFLOWS_SCREENSHOT_PARAM
+};
+//# sourceMappingURL=urlParams.js.map

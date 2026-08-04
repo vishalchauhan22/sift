@@ -1,0 +1,2 @@
+// extracted by mini-css-extract-plugin
+export default {"taskLoader":"tasks_taskLoader_c0s","suggestedTasksContainer":"tasks_suggestedTasksContainer_pMw"};

@@ -31,7 +31,7 @@ function generate(ctx) {
     .join(' ');
   const cmd =
     `nuclei -u ${u.q(u.plainUrl(ctx))} ${headerFlags} -severity low,medium,high,critical ` +
-    `${rateFlag(ctx)} -o nuclei_${ctx.host}.txt`;
+    `${rateFlag(ctx)} -o ${u.outFile(ctx, 'nuclei')}`;
   return {
     tool: 'nuclei',
     commands: [
@@ -43,4 +43,26 @@ function generate(ctx) {
   };
 }
 
-module.exports = { generate };
+/**
+ * JS-exposure preset: run exposure/token/secret templates against a JS URL.
+ * Used by the JS-recon flow (ctx has jsUrl/siteRoot, not request params).
+ * TODO: verify tag names against your template set (`-tags` vs `-t <path>`).
+ */
+function jsExposure(ctx) {
+  const t = u.normalizeThrottle(ctx.throttle);
+  const target = ctx.jsUrl || ctx.siteRoot;
+  const cmd =
+    `nuclei -u ${u.q(target)} -tags exposure,token,jsleak,secret ` +
+    `-rate-limit ${t.rps} -o ${u.outFile(ctx, 'nuclei_js')}`;
+  return {
+    tool: 'nuclei',
+    commands: [
+      {
+        comment: `nuclei: run exposure/token/jsleak/secret templates against ${target}`,
+        command: cmd.replace(/\s+/g, ' ').trim(),
+      },
+    ],
+  };
+}
+
+module.exports = { generate, jsExposure };

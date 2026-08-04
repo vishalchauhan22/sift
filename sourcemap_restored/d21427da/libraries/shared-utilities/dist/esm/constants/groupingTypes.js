@@ -1,0 +1,28 @@
+import "../chunk-BYZ2GIR3.js";
+var GroupingTypeEnum = /* @__PURE__ */ ((GroupingTypeEnum2) => {
+  GroupingTypeEnum2["SPACE_POSTED"] = "SPACE_POSTED";
+  GroupingTypeEnum2["WORKSPACE_TAG"] = "WORKSPACE_TAG";
+  GroupingTypeEnum2["WORKSPACE_PUBLISHED"] = "WORKSPACE_PUBLISHED";
+  GroupingTypeEnum2["USER_OWNED_VIDEOS"] = "USER_OWNED_VIDEOS";
+  GroupingTypeEnum2["USER_ARCHIVED_VIDEOS"] = "USER_ARCHIVED_VIDEOS";
+  GroupingTypeEnum2["USER_SHARED_WITH_ME_VIDEOS"] = "USER_SHARED_WITH_ME_VIDEOS";
+  GroupingTypeEnum2["USER_PROFILE_VIDEOS"] = "USER_PROFILE_VIDEOS";
+  GroupingTypeEnum2["COMMUNITY_VIDEOS"] = "COMMUNITY_VIDEOS";
+  GroupingTypeEnum2["FOLDER"] = "FOLDER";
+  GroupingTypeEnum2["USER_COMMUNITY_VIDEOS"] = "USER_COMMUNITY_VIDEOS";
+  GroupingTypeEnum2["COMMUNITY_PROFILE_VIDEOS"] = "COMMUNITY_PROFILE_VIDEOS";
+  GroupingTypeEnum2["USER_WATCH_LATER"] = "USER_WATCH_LATER";
+  GroupingTypeEnum2["VIDEO_PERSONALIZATION"] = "VIDEO_PERSONALIZATION";
+  GroupingTypeEnum2["VIDEO_PERSONALIZATION_WITH_AUDIO"] = "VIDEO_PERSONALIZATION_WITH_AUDIO";
+  GroupingTypeEnum2["MEETING_RECORDING"] = "MEETING_RECORDING";
+  GroupingTypeEnum2["PINNED_VIDEOS_IN_FOLDER"] = "PINNED_VIDEOS_IN_FOLDER";
+  return GroupingTypeEnum2;
+})(GroupingTypeEnum || {});
+const ADMIN_DELETABLE_GROUPING_TYPES = [
+  "USER_WATCH_LATER" /* USER_WATCH_LATER */
+];
+export {
+  ADMIN_DELETABLE_GROUPING_TYPES,
+  GroupingTypeEnum
+};
+//# sourceMappingURL=groupingTypes.js.map

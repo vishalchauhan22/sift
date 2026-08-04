@@ -1,0 +1,2 @@
+// extracted by mini-css-extract-plugin
+export default {"emptyStateCard":"extension-empty-state_emptyStateCard_zBR","emptyStateImg":"extension-empty-state_emptyStateImg_CR6","guided":"extension-empty-state_guided_A8s","unguided":"extension-empty-state_unguided_xfI"};

@@ -1,0 +1,31 @@
+import {
+  AI_AUTO_CHAPTERING_ACCESS,
+  AI_AUTO_SUMMARIES_ACCESS,
+  AI_AUTO_TASKS_ACCESS,
+  AI_AUTO_TITLE_ACCESS,
+  AI_FILLER_WORD_REMOVAL,
+  AI_FILLER_WORD_PLUS_REMOVAL,
+  AI_SEMANTIC_SEARCH,
+  AUTO_CTA,
+  AI_POWERED_MEETING_NOTES_ACCESS,
+  AI_POWERED_CONFLUENCE_PAGE_ACCESS,
+} from '@loomhq/shared-utilities/constants/scopes';
+
+import { LoggedInUser } from '../types';
+
+const AI_SCOPES = [
+  AI_AUTO_TITLE_ACCESS,
+  AI_AUTO_SUMMARIES_ACCESS,
+  AI_AUTO_CHAPTERING_ACCESS,
+  AI_AUTO_TASKS_ACCESS,
+  AI_FILLER_WORD_REMOVAL,
+  AI_FILLER_WORD_PLUS_REMOVAL,
+  AI_SEMANTIC_SEARCH,
+  AUTO_CTA,
+  AI_POWERED_MEETING_NOTES_ACCESS,
+  AI_POWERED_CONFLUENCE_PAGE_ACCESS,
+];
+
+export const hasAnyAiScope = (user: LoggedInUser): boolean => {
+  return user.scopes.some(scope => scope !== null && AI_SCOPES.includes(scope));
+};

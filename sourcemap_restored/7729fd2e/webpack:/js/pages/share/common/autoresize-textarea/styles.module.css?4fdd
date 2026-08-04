@@ -1,0 +1,2 @@
+// extracted by mini-css-extract-plugin
+export default {"textArea":"autoresize-textarea_textArea_Fp_","sizeSmall":"autoresize-textarea_sizeSmall_TIe","sizeMedium":"autoresize-textarea_sizeMedium_BuD","paddingSmall":"autoresize-textarea_paddingSmall_QIA","paddingMedium":"autoresize-textarea_paddingMedium_SAR","hasInlineButton":"autoresize-textarea_hasInlineButton_WG5","empty":"autoresize-textarea_empty_Fk9","error":"autoresize-textarea_error_ahe"};

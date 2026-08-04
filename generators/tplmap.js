@@ -9,6 +9,7 @@
  *   --method <m>      HTTP method
  *   --cookie <c>      session cookie
  *   (tplmap detects the injectable parameter from the marked value in the URL)
+ *   (no native -o flag) output captured via `| tee` into the project folder
  *
  * Confirms/exploits Server-Side Template Injection after ffuf's 49 canary hit.
  *
@@ -29,7 +30,7 @@ function generate(ctx) {
   } else {
     target = `-u ${u.q(u.urlWithParamValue(ctx, '*'))}`;
   }
-  const cmd = `tplmap ${target} ${method} ${cookieFlag}`;
+  const cmd = `tplmap ${target} ${method} ${cookieFlag} ${u.teeTo(ctx, 'tplmap_' + u.sanitize(ctx.targetParam))}`;
   return {
     tool: 'tplmap',
     commands: [

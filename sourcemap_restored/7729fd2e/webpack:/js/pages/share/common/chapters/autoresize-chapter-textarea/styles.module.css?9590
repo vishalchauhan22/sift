@@ -1,0 +1,2 @@
+// extracted by mini-css-extract-plugin
+export default {"textAreaAutoChapters":"autoresize-chapter-textarea_textAreaAutoChapters_F4x","sizeSmall":"autoresize-chapter-textarea_sizeSmall_lbY","sizeMedium":"autoresize-chapter-textarea_sizeMedium_E7e","textArea":"autoresize-chapter-textarea_textArea_QJt","hasError":"autoresize-chapter-textarea_hasError_N8W","empty":"autoresize-chapter-textarea_empty_i6k","showDeleteChapters":"autoresize-chapter-textarea_showDeleteChapters_Ll_"};

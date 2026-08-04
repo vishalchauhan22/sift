@@ -1,0 +1,2 @@
+// extracted by css-extract-rspack-plugin
+export default {"editItemButton":"edit-item_editItemButton_ilM","isDisabled":"edit-item_isDisabled_dP5","shorterLineHeight":"edit-item_shorterLineHeight_nmL","popover":"edit-item_popover_KIP"};

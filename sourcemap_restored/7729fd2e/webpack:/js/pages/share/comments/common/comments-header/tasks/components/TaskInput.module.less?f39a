@@ -1,0 +1,2 @@
+// extracted by mini-css-extract-plugin
+export default {"editTaskArea":"components_editTaskArea_bWP","isFocused":"components_isFocused_Xmc","isNewEntryPoint":"components_isNewEntryPoint_CYs"};

@@ -29,7 +29,7 @@ function generate(ctx) {
   const method = ctx.method === 'GET' ? 'GET' : 'POST';
   const cmd =
     `arjun -u ${u.q(u.plainUrl(ctx))} -m ${method} -w ${u.q(ctx.wordlist)} ` +
-    `--stable ${delayFlag(ctx)} -oT arjun_${ctx.host}.txt`;
+    `--stable ${delayFlag(ctx)} -oT ${u.outFile(ctx, 'arjun')}`;
   return {
     tool: 'arjun',
     commands: [

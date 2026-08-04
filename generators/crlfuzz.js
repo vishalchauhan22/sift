@@ -34,7 +34,7 @@ function generate(ctx) {
   const cookieFlag = cookie ? `-H ${u.q('Cookie: ' + cookie.value)}` : '';
   const cmd =
     `crlfuzz -u ${u.q(u.plainUrl(ctx))} ${method} ${bodyFlag} ${cookieFlag} ` +
-    `${concurrencyFlag(ctx)} -o crlfuzz_${ctx.host}.txt`;
+    `${concurrencyFlag(ctx)} -o ${u.outFile(ctx, 'crlfuzz')}`;
   return {
     tool: 'crlfuzz',
     commands: [

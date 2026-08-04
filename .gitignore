@@ -3,13 +3,10 @@ node_modules/
 package-lock.json
 
 # generated output (this tool writes these; they're not source)
+# project workspaces hold per-run command files + tool result artifacts
+projects/
 commands.txt
-arjun_*.txt
-x8_*.txt
-paramspider_*.txt
-nuclei_*.txt
-ferox_*.txt
-crlfuzz_*.txt
+sift_commands_*.txt
 
 # editor / OS
 .DS_Store

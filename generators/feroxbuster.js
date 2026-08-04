@@ -31,7 +31,7 @@ function generate(ctx) {
     .join(' ');
   const cmd =
     `feroxbuster -u ${u.q(baseUrl)} -w ${u.q(ctx.wordlist)} ${headerFlags} ` +
-    `${rateFlag(ctx)} -o ferox_${ctx.host}.txt`;
+    `${rateFlag(ctx)} -o ${u.outFile(ctx, 'feroxbuster')}`;
   return {
     tool: 'feroxbuster',
     commands: [

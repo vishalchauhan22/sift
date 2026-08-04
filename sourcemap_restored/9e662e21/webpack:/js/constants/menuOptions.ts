@@ -1,0 +1,25 @@
+export const MOVE = 'Move...';
+export const MANAGE_FOLDER = 'Manage folder';
+export const MAKE_PUBLIC = 'Make public';
+export const MAKE_PRIVATE = 'Make private';
+export const RENAME = 'Rename';
+export const DUPLICATE = 'Duplicate';
+export const ARCHIVE = 'Archive';
+export const UNARCHIVE = 'Unarchive';
+export const DELETE = 'Delete';
+export const DOWNLOAD = 'Download Video';
+export const DOWNLOAD_EXPERIMENT = 'Download Video Experiment';
+export const DOWNLOAD_CAPTIONS = 'Download Captions';
+export const DOWNLOAD_DISABLED_TEXT = 'Preparing download...';
+export const DOWNLOAD_DISABLED_TOOLTIP =
+  "It'll take a little while before this video is ready to download. Hang tight.";
+export const COPY_LINK = 'Copy link';
+export const TRANSCRIPT = 'View transcript (n)';
+export const REVIEW_TRANSCRIPT = 'Review transcript (n)';
+export const SHARE = 'Share';
+export const DIVE = 'Dive (Admin)';
+export const SEARCH = 'Search';
+export const NOTIFICATIONS = 'Notifications';
+export const MOVE_FOLDER_INTO_SPACE = 'Move folder into Space';
+export const CONTACT_SALES = 'Contact Sales';
+export const COPY_FOLDER_EMBED_CODE = 'Copy embed code';

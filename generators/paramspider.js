@@ -18,7 +18,7 @@
 const u = require('../util');
 
 function generate(ctx) {
-  const cmd = `paramspider -d ${u.q(ctx.host)} -o paramspider_${ctx.host}.txt`;
+  const cmd = `paramspider -d ${u.q(ctx.host)} -o ${u.outFile(ctx, 'paramspider')}`;
   return {
     tool: 'paramspider',
     commands: [

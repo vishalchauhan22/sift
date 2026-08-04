@@ -1,15 +1,15 @@
 {
-  "_comment": "Default SecLists wordlist paths per assessment type. Override these to match your install. Paths are NOT validated to exist — this tool only prints strings.",
+  "_comment": "SecLists wordlist paths per assessment type, matched to the install at /home/dev/tools/SecLists. redirect-ssrf and crlf have no dedicated SecLists file — the paths below are the closest fit; override with a dedicated payload list (e.g. PayloadsAllTheThings) when you have one. Paths are NOT validated to exist — this tool only prints strings.",
   "wordlists": {
-    "param-discovery": "/usr/share/seclists/Discovery/Web-Content/burp-parameter-names.txt",
-    "sqli": "/usr/share/seclists/Fuzzing/SQLi/Generic-SQLi.txt",
-    "xss": "/usr/share/seclists/Fuzzing/XSS/XSS-Jhaddix.txt",
-    "command-injection": "/usr/share/seclists/Fuzzing/command-injection-commix.txt",
-    "ssti": "/usr/share/seclists/Fuzzing/template-engines-special-vars.txt",
-    "path-traversal": "/usr/share/seclists/Fuzzing/LFI/LFI-Jhaddix.txt",
-    "redirect-ssrf": "/usr/share/seclists/Fuzzing/URL-based-SSRF-Payloads.txt",
-    "crlf": "/usr/share/seclists/Fuzzing/CRLF-injection.txt",
-    "broad": "/usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt"
+    "param-discovery": "/home/dev/tools/SecLists/Discovery/Web-Content/burp-parameter-names.txt",
+    "sqli": "/home/dev/tools/SecLists/Fuzzing/Databases/SQLi/Generic-SQLi.txt",
+    "xss": "/home/dev/tools/SecLists/Fuzzing/XSS/robot-friendly/XSS-BruteLogic.txt",
+    "command-injection": "/home/dev/tools/SecLists/Fuzzing/command-injection-commix.txt",
+    "ssti": "/home/dev/tools/SecLists/Fuzzing/template-engines-special-vars.txt",
+    "path-traversal": "/home/dev/tools/SecLists/Fuzzing/LFI/LFI-Jhaddix.txt",
+    "redirect-ssrf": "/home/dev/tools/SecLists/Fuzzing/curl-protocols.txt",
+    "crlf": "/home/dev/tools/SecLists/Fuzzing/special-chars + urlencoded.txt",
+    "broad": "/home/dev/tools/SecLists/Discovery/Web-Content/raft-medium-directories.txt"
   },
   "defaultThrottle": {
     "mode": "rps",

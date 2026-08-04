@@ -1,5 +1,7 @@
 'use strict';
 
+const path = require('path');
+
 /**
  * util.js — shared helpers used by every generator.
  *
@@ -137,6 +139,33 @@ function bodyHeaderFlags(ctx) {
   return `-H ${q('Content-Type: ' + ct)}`;
 }
 
+// --- output routing -------------------------------------------------------
+
+/** Make a host/param string safe for a filename (drop ":", "/", etc.). */
+function sanitize(s) {
+  return String(s || 'target').replace(/[^a-zA-Z0-9._-]+/g, '_');
+}
+
+/**
+ * A shell-quoted result-file path inside the project's output dir, named
+ * <label>_<host>_<runId>.<ext>. Every generator routes its -o/output here so
+ * all artifacts land in one project folder with the run timestamp.
+ */
+function outFile(ctx, label, ext = 'txt') {
+  const name = `${label}_${sanitize(ctx.host)}_${ctx.runId || 'run'}.${ext}`;
+  return q(path.join(ctx.outDir || '.', name));
+}
+
+/** Shell-quoted project output directory (for tools that take a dir). */
+function outDirQ(ctx) {
+  return q(ctx.outDir || '.');
+}
+
+/** Append a `| tee <file>` so tools without a native -o still save output. */
+function teeTo(ctx, label) {
+  return `2>&1 | tee ${outFile(ctx, label, 'log')}`;
+}
+
 module.exports = {
   q,
   targetInBody,
@@ -148,4 +177,8 @@ module.exports = {
   urlWithParamValue,
   normalizeThrottle,
   bodyHeaderFlags,
+  sanitize,
+  outFile,
+  outDirQ,
+  teeTo,
 };

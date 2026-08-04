@@ -1,0 +1,10 @@
+// Sources for analytics. Read more in Notion: https://www.notion.so/loom/Gates-Gating-ec92459a641d45038fdb25a359d410bd?pvs=4#3fcdbf2a372249f3b1daee7be84a6d7d
+export const SIGN_UP_PAGE = 'Sign up page';
+export const LOGIN_PAGE = 'Login page';
+export const ANON_RECORD_A_REPLY = 'anon-record-a-reply';
+export const ANON_CREATOR_SHARE_PAGE = 'anon-creator-share-page';
+export const PRIMARY_WEB_APP = 'primary-web-app-onboarding';
+export const ANON_SHARE_GATE_MODAL = 'gate-anon-share';
+export const ANON_SHARE_GATE_HARD_GATE_MODAL = 'gate-asg-hard';
+export const ANON_SHARE_GATE_MOBILE_MODAL = 'gate-anon-share-mobile';
+export const SHARE_PAGE_RIGHT_PANEL_CTA = 'share-page-right-panel-cta';

@@ -1,0 +1,122 @@
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetUserByIdWithProfile"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"userId"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"ID"}}},"directives":[]}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"user"},"name":{"kind":"Name","value":"getUserById"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"userId"},"value":{"kind":"Variable","name":{"kind":"Name","value":"userId"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"__typename"},"arguments":[],"directives":[]},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"RegularUserPayload"}},"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"user"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"email"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"first_name"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"last_name"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"avatars"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"thumb"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"large"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"isAtlassianMastered"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"profile"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"profileUrl"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"profileVideoCount"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"communityVideoCount"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"profileInfo"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"role"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"location"},"arguments":[],"directives":[]}]}}]}}]}}]}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"CommunityUserPayload"}},"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"user"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"first_name"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"last_name"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"avatars"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"thumb"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"large"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"profile"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"profileUrl"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"communityVideoCount"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"profileInfo"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"role"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"location"},"arguments":[],"directives":[]}]}}]}}]}}]}}]}}]}}],"loc":{"start":0,"end":819}};
+    doc.loc.source = {"body":"query GetUserByIdWithProfile($userId: ID!) {\n  user: getUserById(userId: $userId) {\n    __typename\n    ... on RegularUserPayload {\n      user {\n        id\n        email\n        first_name\n        last_name\n        avatars {\n          thumb\n          large\n          isAtlassianMastered\n        }\n        profile {\n          profileUrl\n          profileVideoCount\n          communityVideoCount\n          profileInfo {\n            role\n            location\n          }\n        }\n      }\n    }\n    ... on CommunityUserPayload {\n      user {\n        id\n        first_name\n        last_name\n        avatars {\n          thumb\n          large\n        }\n        profile {\n          profileUrl\n          communityVideoCount\n          profileInfo {\n            role\n            location\n          }\n        }\n      }\n    }\n  }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  
+
+    // Collect any fragment/type references from a node, adding them to the refs Set
+    function collectFragmentReferences(node, refs) {
+      if (node.kind === "FragmentSpread") {
+        refs.add(node.name.value);
+      } else if (node.kind === "VariableDefinition") {
+        var type = node.type;
+        if (type.kind === "NamedType") {
+          refs.add(type.name.value);
+        }
+      }
+
+      if (node.selectionSet) {
+        node.selectionSet.selections.forEach(function(selection) {
+          collectFragmentReferences(selection, refs);
+        });
+      }
+
+      if (node.variableDefinitions) {
+        node.variableDefinitions.forEach(function(def) {
+          collectFragmentReferences(def, refs);
+        });
+      }
+
+      if (node.definitions) {
+        node.definitions.forEach(function(def) {
+          collectFragmentReferences(def, refs);
+        });
+      }
+    }
+
+    var definitionRefs = {};
+    (function extractReferences() {
+      doc.definitions.forEach(function(def) {
+        if (def.name) {
+          var refs = new Set();
+          collectFragmentReferences(def, refs);
+          definitionRefs[def.name.value] = refs;
+        }
+      });
+    })();
+
+    function findOperation(doc, name) {
+      for (var i = 0; i < doc.definitions.length; i++) {
+        var element = doc.definitions[i];
+        if (element.name && element.name.value == name) {
+          return element;
+        }
+      }
+    }
+
+    function oneQuery(doc, operationName) {
+      // Copy the DocumentNode, but clear out the definitions
+      var newDoc = {
+        kind: doc.kind,
+        definitions: [findOperation(doc, operationName)]
+      };
+      if (doc.hasOwnProperty("loc")) {
+        newDoc.loc = doc.loc;
+      }
+
+      // Now, for the operation we're running, find any fragments referenced by
+      // it or the fragments it references
+      var opRefs = definitionRefs[operationName] || new Set();
+      var allRefs = new Set();
+      var newRefs = new Set();
+
+      // IE 11 doesn't support "new Set(iterable)", so we add the members of opRefs to newRefs one by one
+      opRefs.forEach(function(refName) {
+        newRefs.add(refName);
+      });
+
+      while (newRefs.size > 0) {
+        var prevRefs = newRefs;
+        newRefs = new Set();
+
+        prevRefs.forEach(function(refName) {
+          if (!allRefs.has(refName)) {
+            allRefs.add(refName);
+            var childRefs = definitionRefs[refName] || new Set();
+            childRefs.forEach(function(childRef) {
+              newRefs.add(childRef);
+            });
+          }
+        });
+      }
+
+      allRefs.forEach(function(refName) {
+        var op = findOperation(doc, refName);
+        if (op) {
+          newDoc.definitions.push(op);
+        }
+      });
+
+      return newDoc;
+    }
+    
+    module.exports = doc;
+    
+        module.exports["GetUserByIdWithProfile"] = oneQuery(doc, "GetUserByIdWithProfile");
+        

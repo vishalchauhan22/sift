@@ -1,0 +1,122 @@
+
+    var doc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"VideoPlayerV2Fragment"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"RegularUserVideo"}},"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"name"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"clips"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"processing_information"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"trim_ranges"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"from"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"to"},"arguments":[],"directives":[]}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"playable_duration"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"source_duration"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"signedDefaultThumbnails"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"default"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"static"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"signedThumbnails"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"animatedPreview"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"tags"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"owner"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"display_name"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"avatars"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"thumb"},"arguments":[],"directives":[]}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"cta"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"enabled"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"text"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"url"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"mods"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"totalComments"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"totalReactions"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"views"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"total"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"distinct"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"named"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"avatar"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"firstName"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"lastName"},"arguments":[],"directives":[]}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"playable_duration"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"video_properties"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"width"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"height"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"screen_type"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"os"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"recording_version"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"mediaMetadataRotation"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"externalUpload"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"ingestion_type"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"flipped_camera"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"processing_information"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"trim_id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"instant_editing_enabled"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"videoUploadValid"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"trim_ranges"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"from"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"to"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"noise_cancellation_type"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"trim_progress"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"use_emojis"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"comments_enabled"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"createdAt"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"needs_password"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"loom_branded_player"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"complete"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"current_user_is_owner"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"white_label_player"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"organization"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"brandPrimaryColor"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"name"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"type"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"site_id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"planIncludesAI"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"calendarMeetingGuid"},"arguments":[],"directives":[]}]}}],"loc":{"start":0,"end":1210}};
+    doc.loc.source = {"body":"fragment VideoPlayerV2Fragment on RegularUserVideo {\n  id\n  name\n  clips {\n    id\n    processing_information {\n      trim_ranges {\n        from\n        to\n      }\n    }\n    playable_duration\n    source_duration\n  }\n  signedDefaultThumbnails {\n    default\n    static\n  }\n  signedThumbnails {\n    animatedPreview\n  }\n  tags\n  owner {\n    id\n    display_name\n    avatars {\n      thumb\n    }\n  }\n  cta {\n    enabled\n    text\n    url\n    mods\n  }\n  totalComments\n  totalReactions\n  views {\n    total\n    distinct\n    named {\n      avatar\n      firstName\n      lastName\n    }\n  }\n  playable_duration\n  video_properties {\n    width\n    height\n    screen_type\n    os\n    recording_version\n    mediaMetadataRotation\n    externalUpload\n    ingestion_type\n  }\n  flipped_camera\n  processing_information {\n    trim_id\n    instant_editing_enabled\n    videoUploadValid\n    trim_ranges {\n      from\n      to\n    }\n    noise_cancellation_type\n    trim_progress\n  }\n  use_emojis\n  comments_enabled\n  createdAt\n  needs_password\n  loom_branded_player\n  complete\n  current_user_is_owner\n  white_label_player\n  organization {\n    brandPrimaryColor\n    id\n    name\n    type\n    site_id\n    planIncludesAI\n  }\n  calendarMeetingGuid\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  
+
+    // Collect any fragment/type references from a node, adding them to the refs Set
+    function collectFragmentReferences(node, refs) {
+      if (node.kind === "FragmentSpread") {
+        refs.add(node.name.value);
+      } else if (node.kind === "VariableDefinition") {
+        var type = node.type;
+        if (type.kind === "NamedType") {
+          refs.add(type.name.value);
+        }
+      }
+
+      if (node.selectionSet) {
+        node.selectionSet.selections.forEach(function(selection) {
+          collectFragmentReferences(selection, refs);
+        });
+      }
+
+      if (node.variableDefinitions) {
+        node.variableDefinitions.forEach(function(def) {
+          collectFragmentReferences(def, refs);
+        });
+      }
+
+      if (node.definitions) {
+        node.definitions.forEach(function(def) {
+          collectFragmentReferences(def, refs);
+        });
+      }
+    }
+
+    var definitionRefs = {};
+    (function extractReferences() {
+      doc.definitions.forEach(function(def) {
+        if (def.name) {
+          var refs = new Set();
+          collectFragmentReferences(def, refs);
+          definitionRefs[def.name.value] = refs;
+        }
+      });
+    })();
+
+    function findOperation(doc, name) {
+      for (var i = 0; i < doc.definitions.length; i++) {
+        var element = doc.definitions[i];
+        if (element.name && element.name.value == name) {
+          return element;
+        }
+      }
+    }
+
+    function oneQuery(doc, operationName) {
+      // Copy the DocumentNode, but clear out the definitions
+      var newDoc = {
+        kind: doc.kind,
+        definitions: [findOperation(doc, operationName)]
+      };
+      if (doc.hasOwnProperty("loc")) {
+        newDoc.loc = doc.loc;
+      }
+
+      // Now, for the operation we're running, find any fragments referenced by
+      // it or the fragments it references
+      var opRefs = definitionRefs[operationName] || new Set();
+      var allRefs = new Set();
+      var newRefs = new Set();
+
+      // IE 11 doesn't support "new Set(iterable)", so we add the members of opRefs to newRefs one by one
+      opRefs.forEach(function(refName) {
+        newRefs.add(refName);
+      });
+
+      while (newRefs.size > 0) {
+        var prevRefs = newRefs;
+        newRefs = new Set();
+
+        prevRefs.forEach(function(refName) {
+          if (!allRefs.has(refName)) {
+            allRefs.add(refName);
+            var childRefs = definitionRefs[refName] || new Set();
+            childRefs.forEach(function(childRef) {
+              newRefs.add(childRef);
+            });
+          }
+        });
+      }
+
+      allRefs.forEach(function(refName) {
+        var op = findOperation(doc, refName);
+        if (op) {
+          newDoc.definitions.push(op);
+        }
+      });
+
+      return newDoc;
+    }
+    
+    module.exports = doc;
+    
+        module.exports["VideoPlayerV2Fragment"] = oneQuery(doc, "VideoPlayerV2Fragment");
+        

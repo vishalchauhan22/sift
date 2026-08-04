@@ -1,0 +1,122 @@
+
+    var doc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"VideoFields"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"RegularUserVideo"}},"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"name"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"complete"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"archived"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"createdAt"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"s3_id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"totalReactions"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"totalComments"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"organization_idv2"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"currentUserHasWatched"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"views"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"total"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"thumbnails"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"default"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"defaultPlay"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"ogFull"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"full"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"fullPlay"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"defaultGif"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"defaultGifPlay"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"animatedPreview"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"owner"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"first_name"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"last_name"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"avatars"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"large"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"thumb"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"isAtlassianMastered"},"arguments":[],"directives":[]}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"processing_information"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"videoUploadValid"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"videoUploadMessage"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"trim_id"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"playable_duration"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"video_properties"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"thumbnail_is_png"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"duration"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"trim_duration"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"recording_version"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"width"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"height"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"organization"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"name"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"owner_id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"current_user_is_owner"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"download_enabled"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"downloadable"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"downloadableBy"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"currentUserCanEdit"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"tags"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"use_gif"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"visibility"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"is_protected"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"privacy"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"isCommunityLoom"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"spaces"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"isArchived"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"privacy"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"is_primary"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"data_age_limit_in_seconds"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"folder"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"name"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"special_id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"owner_id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"visibility"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"owner"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"first_name"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"last_name"},"arguments":[],"directives":[]}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"isParentOfPersonalizedCopies"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"personalizationType"},"arguments":[],"directives":[]}]}}],"loc":{"start":0,"end":1352}};
+    doc.loc.source = {"body":"fragment VideoFields on RegularUserVideo {\n  id\n  name\n  complete\n  archived\n  createdAt\n  s3_id\n  totalReactions\n  totalComments\n\n  organization_idv2\n  currentUserHasWatched\n  views {\n    total\n  }\n  thumbnails {\n    default\n    defaultPlay\n    ogFull\n    full\n    fullPlay\n    defaultGif\n    defaultGifPlay\n    animatedPreview\n  }\n  owner {\n    first_name\n    last_name\n    id\n    avatars {\n      name\n      large\n      thumb\n      isAtlassianMastered\n    }\n  }\n  processing_information {\n    videoUploadValid\n    videoUploadMessage\n    trim_id\n  }\n  playable_duration\n  video_properties {\n    thumbnail_is_png\n    # eslint-disable-next-line @graphql-eslint/no-deprecated\n    duration\n    # eslint-disable-next-line @graphql-eslint/no-deprecated\n    trim_duration\n    recording_version\n    width\n    height\n  }\n  organization {\n    id\n    name\n  }\n  owner_id\n  current_user_is_owner\n  download_enabled\n  downloadable\n  downloadableBy\n  currentUserCanEdit\n  tags\n  use_gif\n  visibility\n\n  # Used for share modal\n  is_protected\n  privacy\n  isCommunityLoom\n\n  spaces {\n    name\n    id\n    isArchived\n    privacy\n    is_primary\n    data_age_limit_in_seconds\n  }\n\n  folder {\n    id\n    name\n    special_id\n    owner_id\n    visibility\n\n    owner {\n      first_name\n      id\n      last_name\n    }\n  }\n\n  isParentOfPersonalizedCopies\n  personalizationType\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  
+
+    // Collect any fragment/type references from a node, adding them to the refs Set
+    function collectFragmentReferences(node, refs) {
+      if (node.kind === "FragmentSpread") {
+        refs.add(node.name.value);
+      } else if (node.kind === "VariableDefinition") {
+        var type = node.type;
+        if (type.kind === "NamedType") {
+          refs.add(type.name.value);
+        }
+      }
+
+      if (node.selectionSet) {
+        node.selectionSet.selections.forEach(function(selection) {
+          collectFragmentReferences(selection, refs);
+        });
+      }
+
+      if (node.variableDefinitions) {
+        node.variableDefinitions.forEach(function(def) {
+          collectFragmentReferences(def, refs);
+        });
+      }
+
+      if (node.definitions) {
+        node.definitions.forEach(function(def) {
+          collectFragmentReferences(def, refs);
+        });
+      }
+    }
+
+    var definitionRefs = {};
+    (function extractReferences() {
+      doc.definitions.forEach(function(def) {
+        if (def.name) {
+          var refs = new Set();
+          collectFragmentReferences(def, refs);
+          definitionRefs[def.name.value] = refs;
+        }
+      });
+    })();
+
+    function findOperation(doc, name) {
+      for (var i = 0; i < doc.definitions.length; i++) {
+        var element = doc.definitions[i];
+        if (element.name && element.name.value == name) {
+          return element;
+        }
+      }
+    }
+
+    function oneQuery(doc, operationName) {
+      // Copy the DocumentNode, but clear out the definitions
+      var newDoc = {
+        kind: doc.kind,
+        definitions: [findOperation(doc, operationName)]
+      };
+      if (doc.hasOwnProperty("loc")) {
+        newDoc.loc = doc.loc;
+      }
+
+      // Now, for the operation we're running, find any fragments referenced by
+      // it or the fragments it references
+      var opRefs = definitionRefs[operationName] || new Set();
+      var allRefs = new Set();
+      var newRefs = new Set();
+
+      // IE 11 doesn't support "new Set(iterable)", so we add the members of opRefs to newRefs one by one
+      opRefs.forEach(function(refName) {
+        newRefs.add(refName);
+      });
+
+      while (newRefs.size > 0) {
+        var prevRefs = newRefs;
+        newRefs = new Set();
+
+        prevRefs.forEach(function(refName) {
+          if (!allRefs.has(refName)) {
+            allRefs.add(refName);
+            var childRefs = definitionRefs[refName] || new Set();
+            childRefs.forEach(function(childRef) {
+              newRefs.add(childRef);
+            });
+          }
+        });
+      }
+
+      allRefs.forEach(function(refName) {
+        var op = findOperation(doc, refName);
+        if (op) {
+          newDoc.definitions.push(op);
+        }
+      });
+
+      return newDoc;
+    }
+    
+    module.exports = doc;
+    
+        module.exports["VideoFields"] = oneQuery(doc, "VideoFields");
+        

@@ -14,6 +14,7 @@
  *   -mc <codes>         match status codes (redirect discovery)
  *   -rate <n>           max requests/second  (throttle: requests/sec)
  *   -p <sec>            pause seconds between requests (throttle: delay)
+ *   -o <file> -of json  write JSON results into the project folder
  *
  * TODO: verify against installed `ffuf --help` (flag names drift between
  *       versions; e.g. `-rate` vs `-rate-limit`, `-p` vs `-p "0.1"`).
@@ -52,10 +53,16 @@ function block(comment, command) {
   return { tool: 'ffuf', commands: [{ comment, command: command.replace(/\s+/g, ' ').trim() }] };
 }
 
+/** ffuf JSON output routed into the project folder, unique per class+param. */
+function outFlag(ctx, kind) {
+  const label = `ffuf_${kind}_${u.sanitize(ctx.targetParam || 'endpoint')}`;
+  return `-o ${u.outFile(ctx, label, 'json')} -of json`;
+}
+
 // --- one preset per assessment class -------------------------------------
 
 function sqli(ctx) {
-  const cmd = `ffuf ${transport(ctx, 'FUZZ')} -w ${u.q(ctx.wordlist)} -ac ${throttleFlag(ctx)}`;
+  const cmd = `ffuf ${transport(ctx, 'FUZZ')} -w ${u.q(ctx.wordlist)} -ac ${throttleFlag(ctx)} ${outFlag(ctx, 'sqli')}`;
   return block(
     `ffuf: fuzz "${ctx.targetParam}" with SQLi payloads; -ac auto-filters baseline noise (broad triage before sqlmap)`,
     cmd
@@ -63,7 +70,7 @@ function sqli(ctx) {
 }
 
 function xss(ctx) {
-  const cmd = `ffuf ${transport(ctx, 'FUZZ')} -w ${u.q(ctx.wordlist)} ${throttleFlag(ctx)}`;
+  const cmd = `ffuf ${transport(ctx, 'FUZZ')} -w ${u.q(ctx.wordlist)} ${throttleFlag(ctx)} ${outFlag(ctx, 'xss')}`;
   return block(
     `ffuf: reflect XSS payloads through "${ctx.targetParam}"; grep responses for un-encoded reflections before dalfox`,
     cmd
@@ -72,7 +79,7 @@ function xss(ctx) {
 
 function commandInjection(ctx) {
   const canary = 'ffufcanary8321';
-  const cmd = `ffuf ${transport(ctx, 'FUZZ')} -w ${u.q(ctx.wordlist)} -mr ${u.q(canary)} ${throttleFlag(ctx)}`;
+  const cmd = `ffuf ${transport(ctx, 'FUZZ')} -w ${u.q(ctx.wordlist)} -mr ${u.q(canary)} ${throttleFlag(ctx)} ${outFlag(ctx, 'cmdi')}`;
   return block(
     `ffuf: command-injection payloads that echo the canary "${canary}"; -mr matches it in the response (feed hits to commix)`,
     cmd
@@ -81,7 +88,7 @@ function commandInjection(ctx) {
 
 function ssti(ctx) {
   // {{7*7}} style canary — a vulnerable template renders 49.
-  const cmd = `ffuf ${transport(ctx, 'FUZZ')} -w ${u.q(ctx.wordlist)} -mr ${u.q('49')} ${throttleFlag(ctx)}`;
+  const cmd = `ffuf ${transport(ctx, 'FUZZ')} -w ${u.q(ctx.wordlist)} -mr ${u.q('49')} ${throttleFlag(ctx)} ${outFlag(ctx, 'ssti')}`;
   return block(
     `ffuf: SSTI probes ({{7*7}} etc.); -mr '49' flags engines that evaluated the expression (confirm with tplmap)`,
     cmd
@@ -89,7 +96,7 @@ function ssti(ctx) {
 }
 
 function pathTraversal(ctx) {
-  const cmd = `ffuf ${transport(ctx, 'FUZZ')} -w ${u.q(ctx.wordlist)} -mr ${u.q('root:.*:0:0:')} ${throttleFlag(ctx)}`;
+  const cmd = `ffuf ${transport(ctx, 'FUZZ')} -w ${u.q(ctx.wordlist)} -mr ${u.q('root:.*:0:0:')} ${throttleFlag(ctx)} ${outFlag(ctx, 'lfi')}`;
   return block(
     `ffuf: LFI/path-traversal payloads; -mr matches /etc/passwd signature "root:x:0:0:"`,
     cmd
@@ -106,9 +113,9 @@ function redirectSsrf(ctx) {
   let cmd;
   if (u.targetInBody(ctx)) {
     const body = u.buildBodyValue(ctx, oob);
-    cmd = `ffuf -w ${u.q(oobList())} -u ${u.q(directUrl)} -X ${ctx.method} -d ${u.q(body)} ${u.bodyHeaderFlags(ctx)} ${match} ${throttleFlag(ctx)}`;
+    cmd = `ffuf -w ${u.q(ctx.wordlist)} -u ${u.q(directUrl)} -X ${ctx.method} -d ${u.q(body)} ${u.bodyHeaderFlags(ctx)} ${match} ${throttleFlag(ctx)} ${outFlag(ctx, 'redirect')}`;
   } else {
-    cmd = `ffuf -w ${u.q(oobList())} -u ${u.q(directUrl)} ${match} ${throttleFlag(ctx)}`;
+    cmd = `ffuf -w ${u.q(ctx.wordlist)} -u ${u.q(directUrl)} ${match} ${throttleFlag(ctx)} ${outFlag(ctx, 'redirect')}`;
   }
   return block(
     `ffuf: set "${ctx.targetParam}" to the OOB canary (${oob}); ${ctx.oob ? 'match the callback token in-band, and watch your OOB listener' : 'no OOB given — matching redirect status codes only'}`,
@@ -117,7 +124,7 @@ function redirectSsrf(ctx) {
 }
 
 function crlf(ctx) {
-  const cmd = `ffuf ${transport(ctx, 'FUZZ')} -w ${u.q(ctx.wordlist)} -mr ${u.q('ffufcrlf: injected')} ${throttleFlag(ctx)}`;
+  const cmd = `ffuf ${transport(ctx, 'FUZZ')} -w ${u.q(ctx.wordlist)} -mr ${u.q('ffufcrlf: injected')} ${throttleFlag(ctx)} ${outFlag(ctx, 'crlf')}`;
   return block(
     `ffuf: CRLF payloads via "${ctx.targetParam}"; -mr looks for an injected header echoed back (secondary to crlfuzz)`,
     cmd
@@ -132,12 +139,6 @@ function hostToken(oob) {
   } catch (_e) {
     return oob;
   }
-}
-
-// tiny inline note: real runs should point -w at an SSRF payload wordlist
-// whose entries embed your canary host. We reference the config wordlist path.
-function oobList() {
-  return '/usr/share/seclists/Fuzzing/URL-based-SSRF-Payloads.txt';
 }
 
 module.exports = {

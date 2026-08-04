@@ -1,0 +1,2 @@
+// extracted by mini-css-extract-plugin
+export default {"videoCardThumbnailWrapper":"inline-player-video-card_videoCardThumbnailWrapper_PAF","tagLink":"inline-player-video-card_tagLink_kan","inlinePlayerVideoCard":"inline-player-video-card_inlinePlayerVideoCard_MMt","videoVisibility":"inline-player-video-card_videoVisibility_TKy","timeStampText":"inline-player-video-card_timeStampText_s4V"};

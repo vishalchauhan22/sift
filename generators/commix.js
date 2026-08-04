@@ -10,6 +10,7 @@
  *   --cookie <c>      session cookie
  *   --batch           non-interactive
  *   --delay <sec>     seconds between requests (throttle)
+ *   --output-dir <d>  write session/output into the project folder
  *
  * Confirms/exploits OS command injection after ffuf's canary triage.
  *
@@ -31,7 +32,7 @@ function generate(ctx) {
   const target = u.targetInBody(ctx)
     ? `-u ${u.q(u.plainUrl(ctx))} --data ${u.q(u.plainBody(ctx))}`
     : `-u ${u.q(u.plainUrl(ctx))}`;
-  const cmd = `commix ${target} -p ${u.q(p)} ${cookieFlag} --batch ${delayFlag(ctx)}`;
+  const cmd = `commix ${target} -p ${u.q(p)} ${cookieFlag} --batch ${delayFlag(ctx)} --output-dir ${u.outDirQ(ctx)}`;
   return {
     tool: 'commix',
     commands: [

@@ -1,0 +1,2 @@
+// extracted by css-extract-rspack-plugin
+export default {"aiEovnContainer":"end-of-video-comment-overlay_aiEovnContainer_KKg","eovnTextArea":"end-of-video-comment-overlay_eovnTextArea_jNa","eovnTextAreaButton":"end-of-video-comment-overlay_eovnTextAreaButton_JLt","eovnTextAreaButtonDisabled":"end-of-video-comment-overlay_eovnTextAreaButtonDisabled_jZG","eovnButtonMweb":"end-of-video-comment-overlay_eovnButtonMweb_MaG","eovnEntryContainer":"end-of-video-comment-overlay_eovnEntryContainer_ke5"};

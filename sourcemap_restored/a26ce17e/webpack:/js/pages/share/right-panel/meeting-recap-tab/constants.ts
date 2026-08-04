@@ -1,0 +1,1 @@
+export const RECAP_TAB_RIGHT_PANEL_WIDTH = 800;
